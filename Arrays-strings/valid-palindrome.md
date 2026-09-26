@@ -1,8 +1,6 @@
 # Valid Palindrome
 
-## Problem Statement
-
-Given a string, determine whether it is a palindrome after converting uppercase letters to lowercase and ignoring non-alphanumeric characters.
+**Link:** https://leetcode.com/problems/valid-palindrome/
 
 ## Approach
 

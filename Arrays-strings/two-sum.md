@@ -1,54 +1,27 @@
-# Two Sum
+## Problem: Two Sum (Easy)
 
-## Problem Statement
+**Link:** https://leetcode.com/problems/two-sum/
 
-Given an array of integers `nums` and an integer `target`, find two different indices whose corresponding values add up to `target`.
+### Approach
 
-## Approach
+I used a simple approach that checks pairs of numbers and finds the two indices whose values add up to the target. The solution returns the indices of the matching pair.
 
-1. Use two loops to examine pairs of elements.
-2. For each pair, calculate `nums[i] + nums[j]`.
-3. If the sum equals `target`, store the two indices.
-4. Return the two indices.
+### Complexity
 
-## Example
+- **Time:** O(n²)
+- **Space:** O(1)
 
-**Input:**
+### Notes
 
-```text
-nums = [2, 7, 11, 15]
-target = 9
-```
+I tested a normal case and an edge case where the two numbers are the same.
+### Test Cases
 
-**Output:**
+**Test Case 1:**
+- Input: `nums = [2,7,11,15], target = 9`
+- Output: `[0,1]`
+- Type: Typical case
 
-```text
-[0, 1]
-```
-
-## Complexity
-
-* **Time Complexity:** O(n²)
-* **Space Complexity:** O(1) auxiliary space, excluding the returned array.
-
-## Test Cases
-
-### Test Case 1
-
-```text
-Input: nums = [3, 2, 4], target = 6
-Output: [1, 2]
-```
-
-### Test Case 2
-
-```text
-Input: nums = [3, 3], target = 6
-Output: [0, 1]
-```
-
-## LeetCode Result
-
-**Status:** Accepted
-
-The solution was tested locally in VS Code before submission.
+**Test Case 2:**
+- Input: `nums = [3,2,4], target = 6`
+- Output: `[1,2]`
+- Type: Edge case

@@ -1,56 +1,27 @@
-# Valid Anagram
+## Problem: Valid Anagram (Easy)
 
-## Problem Statement
+**Link:** https://leetcode.com/problems/valid-anagram/
 
-Given two strings `s` and `t`, determine whether `t` is an anagram of `s`.
+### Approach
 
-## Approach
+I counted how many times each character appears in both strings. If the strings have the same length and every character has the same count, they are anagrams.
 
-1. Check whether the two strings have the same length.
-2. Create a frequency array for characters.
-3. Increase the count for each character in `s`.
-4. Decrease the count for each character in `t`.
-5. If every frequency becomes zero, the strings are anagrams.
-6. Otherwise, they are not anagrams.
+### Complexity
 
-## Example
+- **Time:** O(n)
+- **Space:** O(1)
 
-**Input:**
+### Notes
 
-```text
-s = "anagram"
-t = "nagaram"
-```
+I first checked whether the two strings have the same length. If their lengths are different, they cannot be anagrams.
+### Test Cases
 
-**Output:**
+**Test Case 1:**
+- Input: `s = "anagram", t = "nagaram"`
+- Output: `true`
+- Type: Typical case
 
-```text
-true
-```
-
-## Complexity
-
-* **Time Complexity:** O(n)
-* **Space Complexity:** O(1), because the frequency array has a fixed size.
-
-## Test Cases
-
-### Test Case 1
-
-```text
-Input: s = "anagram", t = "nagaram"
-Output: true
-```
-
-### Test Case 2
-
-```text
-Input: s = "rat", t = "car"
-Output: false
-```
-
-## LeetCode Result
-
-**Status:** Accepted
-
-The solution was tested locally in VS Code before submission.
+**Test Case 2:**
+- Input: `s = "rat", t = "car"`
+- Output: `false`
+- Type: Edge case

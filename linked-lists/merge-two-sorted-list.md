@@ -1,8 +1,6 @@
 # Merge Two Sorted Lists
 
-## Problem
-
-Given the heads of two sorted linked lists, merge them into one sorted linked list.
+**Link:** https://leetcode.com/problems/merge-two-sorted-lists/
 
 ## Approach
 

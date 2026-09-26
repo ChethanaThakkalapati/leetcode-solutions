@@ -1,54 +1,27 @@
-# Move Zeroes
+## Problem: Move Zeroes (Easy)
 
-## Problem Statement
+**Link:** https://leetcode.com/problems/move-zeroes/
 
-Given an integer array, move all `0`s to the end of the array while maintaining the relative order of the non-zero elements.
+### Approach
 
-## Approach
+I moved every non-zero value toward the beginning of the array while keeping their original order. After all non-zero values were placed, I filled the remaining positions with zeroes.
 
-1. Maintain a `position` variable to track where the next non-zero element should go.
-2. Traverse the array.
-3. Whenever a non-zero element is found, place it at `position`.
-4. Increase `position`.
-5. After processing all elements, fill the remaining positions with `0`.
+### Complexity
 
-## Example
+- **Time:** O(n)
+- **Space:** O(1)
 
-**Input:**
+### Notes
 
-```text id="x2j9vq"
-nums = [0, 1, 0, 3, 12]
-```
+The relative order of the non-zero elements must stay the same. I also tested an array containing multiple zeroes.
+### Test Cases
 
-**Output:**
+**Test Case 1:**
+- Input: `[0,1,0,3,12]`
+- Output: `[1,3,12,0,0]`
+- Type: Typical case
 
-```text id="yd0c7e"
-[1, 3, 12, 0, 0]
-```
-
-## Complexity
-
-* **Time Complexity:** O(n)
-* **Space Complexity:** O(1)
-
-## Test Cases
-
-### Test Case 1
-
-```text id="xgl5pg"
-Input: [0, 1, 0, 3, 12]
-Output: [1, 3, 12, 0, 0]
-```
-
-### Test Case 2
-
-```text id="z3n0cg"
-Input: [0, 0, 1]
-Output: [1, 0, 0]
-```
-
-## LeetCode Result
-
-**Status:** Accepted
-
-The solution was tested locally in VS Code before submission.
+**Test Case 2:**
+- Input: `[0,0,1]`
+- Output: `[1,0,0]`
+- Type: Edge case

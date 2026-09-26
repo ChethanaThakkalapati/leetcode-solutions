@@ -1,46 +1,27 @@
-# Binary Search
+## Problem: Binary Search (Easy)
 
-## Problem
+**Link:** https://leetcode.com/problems/binary-search/
 
-Given a sorted array of integers, find the position of a target value. Return `-1` if the target is not present.
+### Approach
 
-## Approach
+I used two pointers to represent the current search range. I checked the middle element and then discarded the half of the array that could not contain the target.
 
-I used binary search.
+### Complexity
 
-1. Set `left` to the first index.
-2. Set `right` to the last index.
-3. Find the middle index.
-4. If the middle value equals the target, return its index.
-5. If the middle value is smaller than the target, search the right half.
-6. Otherwise, search the left half.
-7. Return `-1` if the target is not found.
+- **Time:** O(log n)
+- **Space:** O(1)
 
-## Example
+### Notes
 
-Input:
-`nums = [-1,0,3,5,9,12], target = 9`
+The input array must be sorted for binary search to work correctly. I also tested the case where the target is not present.
+### Test Cases
 
-Output:
-`4`
+**Test Case 1:**
+- Input: `nums = [-1,0,3,5,9,12], target = 9`
+- Output: `4`
+- Type: Typical case
 
-## Complexity
-
-* Time: `O(log n)`
-* Space: `O(1)`
-
-## Test Cases
-
-### Test Case 1
-
-Input: `[-1,0,3,5,9,12]`, target = `9`
-Output: `4`
-
-### Test Case 2
-
-Input: `[-1,0,3,5,9,12]`, target = `2`
-Output: `-1`
-
-## LeetCode Result
-
-Accepted
+**Test Case 2:**
+- Input: `nums = [-1,0,3,5,9,12], target = 2`
+- Output: `-1`
+- Type: Edge case
